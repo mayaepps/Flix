@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movies View Controller-->
+        <!--Movies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MoviesViewController" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="172" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FLC-e5-7Nk">
-                                <rect key="frame" x="0.0" y="-1" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -52,6 +52,7 @@
                                             <outlet property="posterView" destination="eja-Tg-vmU" id="kv9-5Q-RfD"/>
                                             <outlet property="synopsisLabel" destination="ODO-UF-vMw" id="qnA-wR-Bpe"/>
                                             <outlet property="titleLabel" destination="seY-Jt-wTW" id="z8Y-4f-hHf"/>
+                                            <segue destination="l52-uu-nrc" kind="show" id="7yu-9M-ei7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -60,14 +61,68 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="CDh-bd-eXN"/>
+                    <navigationItem key="navigationItem" title="Movies" id="CDh-bd-eXN"/>
                     <connections>
                         <outlet property="tableView" destination="FLC-e5-7Nk" id="Lsx-yb-oU3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1436.2318840579712" y="77.445652173913047"/>
+            <point key="canvasLocation" x="1369.5652173913045" y="76.630434782608702"/>
+        </scene>
+        <!--Movie Details-->
+        <scene sceneID="v1V-fR-2G3">
+            <objects>
+                <viewController id="l52-uu-nrc" customClass="DetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mmv-CD-ZaD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mgj-0f-Umk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SZy-Ia-ENe">
+                                        <rect key="frame" x="0.0" y="-44" width="414" height="206"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n4c-V5-pEX">
+                                        <rect key="frame" x="0.0" y="78" width="127" height="179"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjp-6o-oeX">
+                                        <rect key="frame" x="135" y="187" width="271" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAj-Yt-XWh">
+                                        <rect key="frame" x="8" y="265" width="398" height="403"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="vez-9l-VEm"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="NBG-Wf-7UN"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jWs-Qi-5Wx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Movie Details" id="ePA-H2-qrQ"/>
+                    <connections>
+                        <outlet property="backdropView" destination="SZy-Ia-ENe" id="8zx-O5-MYe"/>
+                        <outlet property="posterView" destination="n4c-V5-pEX" id="gPN-fi-lPl"/>
+                        <outlet property="synopsisLabel" destination="hAj-Yt-XWh" id="tDx-bJ-3xw"/>
+                        <outlet property="titleLabel" destination="rjp-6o-oeX" id="uE9-oc-NX6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PL4-af-d4b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2182.608695652174" y="76.630434782608702"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z5Y-aF-Ej1">
