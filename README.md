@@ -11,10 +11,10 @@ The following functionality is complete:
 - [x] User sees an app icon on the home screen and a styled launch screen.
 - [x] User can view a list of movies currently playing in theaters from The Movie Database.
 - [x] Poster images are loaded using the UIImageView category in the AFNetworking library.
-- [ ] User sees a loading state while waiting for the movies API.
+- [x] User sees a loading state while waiting for the movies API.
 - [x] User can pull to refresh the movie list.
 - [ ] User sees an error message when there's a networking error.
-- [ ] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
+- [x] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
 - [ ] User can tap a poster in the collection view to see a detail screen of that movie
 - [ ] User can search for a movie.
 - [ ] All images fade in as they are loading.
