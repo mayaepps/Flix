@@ -44,6 +44,16 @@
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
            if (error != nil) {
                NSLog(@"%@", [error localizedDescription]);
+               UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Cannot get movies" message:[error localizedDescription] preferredStyle:(UIAlertControllerStyleAlert)];
+               // create a "Try Again" action
+               UIAlertAction *tryAgainAction = [UIAlertAction actionWithTitle:@"Try Again" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                   // handle response here.
+                   [self fetchMovies];
+                }];
+               // add the action to the alert controller
+               [alert addAction:tryAgainAction];
+               [self presentViewController:alert animated:YES completion:^{}];
+               
            }
            else {
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
