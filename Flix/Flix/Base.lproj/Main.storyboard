@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="572" y="-919"/>
         </scene>
-        <!--Movies-->
+        <!--Now Playing Movies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MoviesViewController" sceneMemberID="viewController">
@@ -86,7 +86,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Movies" id="CDh-bd-eXN"/>
+                    <navigationItem key="navigationItem" title="Now Playing Movies" id="CDh-bd-eXN"/>
                     <connections>
                         <outlet property="activityIndicator" destination="noL-du-bMn" id="Nth-R2-Id7"/>
                         <outlet property="tableView" destination="FLC-e5-7Nk" id="Lsx-yb-oU3"/>
@@ -154,7 +154,7 @@
         <scene sceneID="z5Y-aF-Ej1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Shr-Jg-SCJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Now Playing" id="47w-Cn-86g"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="now_playing_tabbar_item" id="47w-Cn-86g"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rDF-KY-T62">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -169,11 +169,11 @@
             </objects>
             <point key="canvasLocation" x="45" y="-165"/>
         </scene>
-        <!--Item-->
+        <!--Search-->
         <scene sceneID="4UG-Bs-Wgd">
             <objects>
                 <navigationController id="JQZ-Hq-ToJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="BK3-ED-os1"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="BK3-ED-os1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cJB-Xw-zUP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -186,7 +186,7 @@
             </objects>
             <point key="canvasLocation" x="1035" y="-165"/>
         </scene>
-        <!--Movies Grid View Controller-->
+        <!--Search for movies-->
         <scene sceneID="0fi-DM-0js">
             <objects>
                 <viewController id="VOX-rq-cek" customClass="MoviesGridViewController" sceneMemberID="viewController">
@@ -198,27 +198,30 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dBO-Zy-2Pv">
-                                    <size key="itemSize" width="125" height="196"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="dBO-Zy-2Pv">
+                                    <size key="itemSize" width="206" height="305"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCollectionCell" id="d6m-rb-0su" customClass="MovieCollectionCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="125" height="196"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="MovieCollectionCell" id="d6m-rb-0su" customClass="MovieCollectionCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="206" height="305"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LVa-jf-vKA">
-                                            <rect key="frame" x="0.0" y="0.0" width="125" height="196"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="206" height="305"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0x-eP-gV7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="196"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="O0x-eP-gV7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="206" height="305"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                                    <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                                                 </imageView>
                                             </subviews>
+                                            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="125" height="196"/>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                        <size key="customSize" width="206" height="305"/>
                                         <connections>
                                             <outlet property="posterView" destination="O0x-eP-gV7" id="eIb-Oi-8fq"/>
                                             <segue destination="l52-uu-nrc" kind="show" id="pWH-aq-h9B"/>
@@ -230,7 +233,7 @@
                         <viewLayoutGuide key="safeArea" id="5Pa-6j-GKn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="d82-XO-ymA"/>
+                    <navigationItem key="navigationItem" title="Search for movies" id="d82-XO-ymA"/>
                     <connections>
                         <outlet property="collectionView" destination="W9Q-3J-xuR" id="Xbd-Un-KoU"/>
                     </connections>
@@ -241,9 +244,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pWH-aq-h9B"/>
+        <segue reference="7yu-9M-ei7"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="now_playing_tabbar_item" width="21" height="21"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
