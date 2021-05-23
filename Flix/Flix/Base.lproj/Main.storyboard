@@ -221,6 +221,7 @@
                                         <size key="customSize" width="125" height="196"/>
                                         <connections>
                                             <outlet property="posterView" destination="O0x-eP-gV7" id="eIb-Oi-8fq"/>
+                                            <segue destination="l52-uu-nrc" kind="show" id="pWH-aq-h9B"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -239,6 +240,9 @@
             <point key="canvasLocation" x="1034.7826086956522" y="601.63043478260875"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pWH-aq-h9B"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
