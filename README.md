@@ -13,16 +13,14 @@ The following functionality is complete:
 - [x] Poster images are loaded using the UIImageView category in the AFNetworking library.
 - [x] User sees a loading state while waiting for the movies API.
 - [x] User can pull to refresh the movie list.
-- [ ] User sees an error message when there's a networking error.
+- [x] User sees an error message when there's a networking error.
 - [x] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
-- [ ] User can tap a poster in the collection view to see a detail screen of that movie
-- [ ] User can search for a movie.
+- [x] User can tap a poster in the collection view to see a detail screen of that movie
+- [x] User can search for a movie.
 - [ ] All images fade in as they are loading.
 - [ ] User can view the large movie poster by tapping on a cell.
 - [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
 - [ ] Customize the selection effect of the cell.
-- [ ] Customize the navigation bar.
-- [ ] Customize the UI.
 
 ## Video Walkthrough
 
