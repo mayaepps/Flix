@@ -120,15 +120,29 @@
                                             <outletCollection property="gestureRecognizers" destination="VBQ-Bp-EV2" appends="YES" id="1aV-9i-1Lg"/>
                                         </connections>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjp-6o-oeX">
-                                        <rect key="frame" x="135" y="187" width="271" height="70"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjp-6o-oeX">
+                                        <rect key="frame" x="135" y="179" width="271" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAj-Yt-XWh">
-                                        <rect key="frame" x="8" y="265" width="398" height="403"/>
+                                        <rect key="frame" x="8" y="308" width="398" height="327"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Released:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYX-hV-Yx5">
+                                        <rect key="frame" x="8" y="265" width="84" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snb-tI-v72">
+                                        <rect key="frame" x="93" y="265" width="143" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -146,6 +160,7 @@
                     <connections>
                         <outlet property="backdropView" destination="SZy-Ia-ENe" id="8zx-O5-MYe"/>
                         <outlet property="posterView" destination="n4c-V5-pEX" id="gPN-fi-lPl"/>
+                        <outlet property="releaseDateLabel" destination="Snb-tI-v72" id="5lo-6B-tD8"/>
                         <outlet property="synopsisLabel" destination="hAj-Yt-XWh" id="tDx-bJ-3xw"/>
                         <outlet property="titleLabel" destination="rjp-6o-oeX" id="uE9-oc-NX6"/>
                     </connections>
@@ -158,7 +173,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="45" y="1428"/>
+            <point key="canvasLocation" x="44.927536231884062" y="1427.4456521739132"/>
         </scene>
         <!--Trailer View Controller-->
         <scene sceneID="njM-fr-a8u">
