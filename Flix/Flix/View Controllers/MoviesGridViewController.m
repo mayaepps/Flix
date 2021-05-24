@@ -10,10 +10,12 @@
 #import "UIImageView+AFNetworking.h"
 #import "DetailsViewController.h"
 
-@interface MoviesGridViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface MoviesGridViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate>
 
+@property (nonatomic, strong) NSArray *allMovies;
 @property (nonatomic, strong) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -22,8 +24,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // create the search bar programatically since you won't be
+    // able to drag one onto the navigation bar
+    self.searchBar = [[UISearchBar alloc] init];
+    [self.searchBar sizeToFit];
+      
+    // the UIViewController comes with a navigationItem property
+    // this will automatically be initialized for you if when the
+    // view controller is added to a navigation controller's stack
+    // you just need to set the titleView to be the search bar
+    self.navigationItem.titleView = self.searchBar;
+    
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    self.searchBar.delegate = self;
     
     [self fetchMovies];
 }
@@ -42,6 +56,7 @@
                
                // Store the movies in a property to use elsewhere
                self.movies = dataDictionary[@"results"];
+               self.allMovies = dataDictionary[@"results"];
                // Reload the collection view data
                [self.collectionView reloadData];
            }
@@ -81,6 +96,26 @@
     
     DetailsViewController *detailsViewController = [segue destinationViewController];
     detailsViewController.movie = movie;
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    
+    if (searchText.length != 0) {
+        
+        NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
+            return [evaluatedObject.description containsString:searchText];
+        }];
+        self.movies = [self.allMovies filteredArrayUsingPredicate:predicate];
+        
+        NSLog(@"%@", self.movies);
+        
+    }
+    else {
+        self.movies = self.allMovies;
+    }
+    
+    [self.collectionView reloadData];
+ 
 }
 
 
