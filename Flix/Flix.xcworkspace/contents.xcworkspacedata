@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/mayaepps/Documents/Projects/iOS/Flix/Flix/Flix/View Controllers/TrailerViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/mayaepps/Documents/Projects/iOS/Flix/Flix/Flix/View Controllers/TrailerViewController.m">
+   </FileRef>
+   <FileRef
       location = "group:Flix.xcodeproj">
    </FileRef>
    <FileRef
