@@ -44,7 +44,6 @@
     self.synopsisLabel.text = self.movie[@"overview"];
     self.releaseDateLabel.text = self.movie[@"release_date"];
     
-    [self.titleLabel sizeToFit];
     [self.synopsisLabel sizeToFit];
 }
 - (IBAction)posterViewTapped:(id)sender {
