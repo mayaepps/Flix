@@ -18,16 +18,12 @@ The following functionality is complete:
 - [x] User can tap a poster in the collection view to see a detail screen of that movie
 - [x] User can search for a movie.
 - [x] User can view the trailer for a movie by tapping on the poster in the detail screen.
-- [ ] All images fade in as they are loading.
-- [ ] User can view the large movie poster by tapping on a cell.
-- [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
-- [ ] Customize the selection effect of the cell.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='flix.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
